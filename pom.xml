@@ -172,6 +172,22 @@
 					</configuration>
 				</plugin>
 			</plugins>
+			<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-assembly-plugin</artifactId>
+  <configuration>
+    <descriptor>src/assembly/bin.xml</descriptor>
+    <finalName>apache-maven-cookbook-${pom.version}</finalName>
+  </configuration>
+  <executions>
+    <execution>
+      <phase>package</phase>
+      <goals>
+        <goal>single</goal>
+      </goals>
+    </execution>
+  </executions>
+</plugin>
 		</pluginManagement>
 	</build>
 </project>
